@@ -9,9 +9,9 @@ if (!parsed) { Console.WriteLine("You entered the wrong value.It should be a num
 // int[] arr = new int[x];
 
 // //arr[0] = 1;
-// int j;
+int j;
 
-// int value = 0;
+//int value = 0;
 // for (j = 0; j < x; j++)
 // {
 // TWO:
@@ -60,3 +60,24 @@ if (!parsed) { Console.WriteLine("You entered the wrong value.It should be a num
 
 
 string[] arr = new string[x];
+
+for (j = 0; j < x; j++)
+{
+
+    Console.WriteLine("Enter values for the array : ");
+    string? m = Console.ReadLine();
+    //string value ;
+    // if (!valueParsed)
+    // {
+    //     Console.WriteLine("You entered the wrong value.It should be a number.");
+    //     goto TWO;
+    // }
+
+    arr[j] = m;
+
+}
+ 
+for (int i = 0; i < x; i++)
+{
+    Console.Write($"{arr[i]},");
+}
