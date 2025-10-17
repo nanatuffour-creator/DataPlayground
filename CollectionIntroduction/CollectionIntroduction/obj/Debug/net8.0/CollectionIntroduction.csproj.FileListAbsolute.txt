@@ -12,3 +12,4 @@ C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\
 C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.pdb
 C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.genruntimeconfig.cache
 C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\ref\CollectionIntroduction.dll
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.sourcelink.json
