@@ -32,3 +32,18 @@ for (int i = 0; i < x; i++)
 {
     Console.WriteLine(arr[i]);
 }
+
+if (arr[0] == value)
+{
+    Console.WriteLine($"Add : {arr[0]}");
+}
+else { Console.WriteLine($"Add : {arr[0] + value}"); }
+
+if (x % 2 == 0)
+{
+    Console.WriteLine($"Middle Numbers : {arr[(x/2)-1]} ,{arr[x/2]}");
+}
+else
+{
+    Console.WriteLine($"Middle Number : {arr[x/2]}");
+}
