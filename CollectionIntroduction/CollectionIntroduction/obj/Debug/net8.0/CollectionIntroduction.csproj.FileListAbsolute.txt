@@ -1,0 +1,14 @@
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\bin\Debug\net8.0\CollectionIntroduction.exe
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\bin\Debug\net8.0\CollectionIntroduction.deps.json
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\bin\Debug\net8.0\CollectionIntroduction.runtimeconfig.json
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\bin\Debug\net8.0\CollectionIntroduction.dll
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\bin\Debug\net8.0\CollectionIntroduction.pdb
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.AssemblyInfoInputs.cache
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.AssemblyInfo.cs
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.csproj.CoreCompileInputs.cache
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.dll
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\refint\CollectionIntroduction.dll
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.pdb
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\CollectionIntroduction.genruntimeconfig.cache
+C:\Users\ja550\DataPlayground\CollectionIntroduction\CollectionIntroduction\obj\Debug\net8.0\ref\CollectionIntroduction.dll
