@@ -1,14 +1,15 @@
-# CollectionIntroduction/CollectionIntroduction/bin/Debug/net8.0/CollectionIntroduction.dll
-# CollectionIntroduction/CollectionIntroduction/bin/Debug/net8.0/CollectionIntroduction.exe
-# CollectionIntroduction/CollectionIntroduction/bin/Debug/net8.0/CollectionIntroduction.pdb
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/CollectionIntroduction.AssemblyInfo.cs
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/CollectionIntroduction.AssemblyInfoInputs.cache
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/CollectionIntroduction.dll
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/CollectionIntroduction.pdb
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/CollectionIntroduction.sourcelink.json
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/apphost.exe
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/ref/CollectionIntroduction.dll
-# CollectionIntroduction/CollectionIntroduction/obj/Debug/net8.0/refint/CollectionIntroduction.dll
-
-CollectionIntroduction/CollectionIntroduction/bin/**
-CollectionIntroduction/CollectionIntroduction/obj/**
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
