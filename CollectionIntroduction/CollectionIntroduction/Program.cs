@@ -4,7 +4,7 @@ ONE:
 Console.Write("Enter size for array : ");
 bool parsed = int.TryParse(Console.ReadLine(), out int x);
 
-if (!parsed) goto ONE;
+if (!parsed) { Console.WriteLine("You entered the wrong value.It should be a number.");goto ONE;}
 
 int[] arr = new int[x];
 
@@ -21,6 +21,7 @@ TWO:
     bool valueParsed = int.TryParse(m, out value);
     if (!valueParsed)
     {
+        Console.WriteLine("You entered the wrong value.It should be a number.");
         goto TWO;
     }
 
