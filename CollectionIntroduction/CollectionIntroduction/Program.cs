@@ -26,30 +26,8 @@ TWO:
 
     arr[j] = value;
 
-    // if (int.TryParse(m, out int d))
-    // {
-    //     Console.WriteLine($"The value should not {d}.");
-    // }
-    // else
-    // {
-    //     Console.WriteLine($"Enter a valid number.");
-    // }
 }
 for (int i = 0; i < x; i++)
 {
     Console.WriteLine(arr[i]);
 }
-
-// arr[0] = 2;
-// arr[1] = 5;
-// arr[2] = 4;
-// arr[3] = 8;
-// arr[5] = 7;
-// arr[6] = 7;
-// arr[7] = 7;
-
-// Console.WriteLine($"{arr[0]}");
-// Console.WriteLine($"{arr[1]}");
-// Console.WriteLine($"{arr[2]}");
-// Console.WriteLine($"{arr[3]}");
-// Console.WriteLine($"{arr[4]}");
