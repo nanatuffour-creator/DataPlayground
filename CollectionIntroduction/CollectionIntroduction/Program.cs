@@ -57,10 +57,7 @@ int j;
 //     Console.WriteLine($"Middle Number : {arr[x / 2]}");
 // }
 
-
-
 string?[] arr = new string[x];
-
 
 for (j = 0; j < x; j++)
 {
