@@ -62,7 +62,7 @@ string?[] arr = new string[x];
 for (j = 0; j < x; j++)
 {
     THREE:
-    Console.WriteLine("Enter for the array : ");
+    Console.WriteLine("Enter value for the array : ");
     arr[j] = Console.ReadLine();
 
     if (arr[j] == string.Empty)
