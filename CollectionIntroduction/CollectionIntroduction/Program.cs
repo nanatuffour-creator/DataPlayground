@@ -59,25 +59,41 @@ int j;
 
 
 
-string[] arr = new string[x];
+string?[] arr = new string[x];
+
 
 for (j = 0; j < x; j++)
 {
+    THREE:
+    Console.WriteLine("Enter for the array : ");
+    arr[j] = Console.ReadLine();
 
-    Console.WriteLine("Enter values for the array : ");
-    string? m = Console.ReadLine();
-    //string value ;
-    // if (!valueParsed)
-    // {
-    //     Console.WriteLine("You entered the wrong value.It should be a number.");
-    //     goto TWO;
-    // }
-
-    arr[j] = m;
-
+    if (arr[j] == string.Empty)
+    {
+        Console.WriteLine("You input should not be empty.");goto THREE;
+    }
 }
- 
+Console.WriteLine();
 for (int i = 0; i < x; i++)
 {
-    Console.Write($"{arr[i]},");
+    Console.WriteLine($"{arr[i] }");
+}
+
+if (x == 1)
+{
+    Console.WriteLine($"\n{arr[0]}");
+}
+else { Console.WriteLine($"\n{arr[0]} , {arr[x-1]}"); }
+
+if(x == 2)
+{
+    Console.WriteLine($"There is no middle word.");
+}
+else if (x % 2 == 0)
+{
+    Console.WriteLine($"Middle Word : {arr[(x / 2) - 1]} , {arr[x / 2]}");
+}
+else
+{
+    Console.WriteLine($"Middle Word : {arr[x / 2]}");
 }
