@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionIntroduction", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGenerator", "PasswordGenerator\PasswordGenerator.csproj", "{A1F4C916-8218-4E4F-A32E-1BAE5BCB4C86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csproj", "{BF654FDA-DA6E-4771-86C2-9F79AEB7FCA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{D830A5CD-83B3-4B97-98C9-AA239BC9B875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,14 @@ Global
 		{A1F4C916-8218-4E4F-A32E-1BAE5BCB4C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F4C916-8218-4E4F-A32E-1BAE5BCB4C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F4C916-8218-4E4F-A32E-1BAE5BCB4C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF654FDA-DA6E-4771-86C2-9F79AEB7FCA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF654FDA-DA6E-4771-86C2-9F79AEB7FCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF654FDA-DA6E-4771-86C2-9F79AEB7FCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF654FDA-DA6E-4771-86C2-9F79AEB7FCA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D830A5CD-83B3-4B97-98C9-AA239BC9B875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D830A5CD-83B3-4B97-98C9-AA239BC9B875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D830A5CD-83B3-4B97-98C9-AA239BC9B875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D830A5CD-83B3-4B97-98C9-AA239BC9B875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{688597FF-DE31-4B41-BA69-CD641D7BF51B} = {F661CA75-69C1-4898-AA5A-0ABCE6575C7B}
