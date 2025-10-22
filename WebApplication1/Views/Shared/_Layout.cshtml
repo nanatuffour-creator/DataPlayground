@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - WebApplication1</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/newstyles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -13,14 +14,14 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-0">
             <div class="container">
-                <a class="navbar-brand"  style="margin-right: 40rem;" asp-area="" asp-controller="Home" asp-action="Index"><i>&lt;/CodeAxis&gt;</i></a>
+                <a class="navbar-brand "  asp-area="" asp-controller="Home" asp-action="Index"><i>&lt;/CodeAxis&gt;</i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item my-box">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
@@ -50,8 +51,8 @@
         <div class="container d-flex">
             <a href="https://github.com/nanatuffour-creator" target="_blank" class="text-dark fs-4 me-2"><i class="bi bi-github"></i></a>
             <a href="https://instagram.com/__nana_.yaw" target="_blank" class="text-dark fs-4 me-2"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/233243858373" target="_blank" class="text-success fs-4" style="margin-right: 42rem"><i class="bi bi-whatsapp"></i></a>
-            &copy; 2025 CodeAxis | Built by Nana Yaw | <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a href="https://wa.me/233243858373" target="_blank" class="text-success fs-4 me-sm-auto me-md-auto me-lg-auto"><i class="bi bi-whatsapp"></i></a>
+            &copy; 2025 CodeAxis | Built by Nana Yaw | <a asp-area="" asp-controller="Home" asp-action="About">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

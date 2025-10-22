@@ -1,6 +1,37 @@
 @{
-    ViewData["Title"] = "Let's Talk";
+    ViewData["Title"] = "Contact Me";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>This is the contact page</p>
+
+<div class="mt-5">
+    <h1 class="h1 text-center text-dark">@ViewData["Title"]</h1>
+    <p class="h2 text-center fst-italic">tuffour_@@outlook.com</p>
+    <p class="lead text-center font-monospace">Feel free to contact me with any inquiries or questions.</p>
+</div>
+
+<div class="mt-4 col-12 col-lg-6 col-md-8 mx-auto">
+    <form>
+        <div class="row g-3 mb-3">
+            <div class="col-12 col-md-6">
+                <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="Name" required>
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="email" class="form-control border-0 border-bottom rounded-0" placeholder="Email Address" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control border-0 border-bottom rounded-0" rows="4" placeholder="Message" required></textarea>
+        </div>
+        <div class="text-end">
+            <button type="submit" class="btn btn-outline-primary px-4">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="container d-flex mt-4 col-lg-1 col-md-8">
+    <a href="https://github.com/nanatuffour-creator" target="_blank" class="text-dark fs-4 me-2"><i class="bi bi-github"></i></a>
+    <a href="https://instagram.com/__nana_.yaw" target="_blank" class="text-dark fs-4 me-2"><i class="bi bi-instagram"></i></a>
+    <a href="https://wa.me/233243858373" target="_blank" class="text-success fs-4 me-sm-auto me-md-auto me-lg-auto"><i class="bi bi-whatsapp"></i></a>
+</div>
+
+

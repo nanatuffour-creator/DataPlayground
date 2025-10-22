@@ -1,0 +1,58 @@
+.me-6{
+  margin-right:80px;
+}
+
+.border{
+    padding:10px;
+    border-radius:10px;
+    height:330px;
+    width:220px;
+}
+
+.ms-6{
+  margin-right:120px;
+}
+
+.hj{
+    background-image: url('https://img.freepik.com/premium-photo/top-view-desk-flat-lay-background-with-computer-laptop-office-equipment-empty-work-area-copy-space-concept_619210-490.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+/* Default (for all screens) */
+.my-box {
+  margin-left: 40px;
+}
+
+/* Small screens (max width: 576px) */
+@media (max-width: 576px) {
+  .my-box {
+    margin-left: auto;
+  }
+  .hj{
+    height: 430px;
+    width:100%;
+  }
+}
+
+/* Medium screens (min width: 768px) */
+@media (min-width: 768px) {
+  .my-box {
+    margin-left: auto;
+  }
+  .hj{
+    height: 460px;
+    width:100%;
+  }
+}
+
+/* Large screens (min width: 992px) */
+@media (min-width: 992px) {
+  .my-box {
+    margin-left: auto;
+  }
+  .hj{
+    height: 510px;
+    width:100%;
+  }
+}

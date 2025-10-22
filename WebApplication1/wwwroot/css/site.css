@@ -20,3 +20,31 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.image{
+        height:330px;
+        width:220px;
+}
+
+@media (max-width:768px){
+  .image{
+      height:auto;
+      width:100%;
+  } 
+}
+
+.images{
+        height:320px;
+        width:300px;
+}
+
+@media (max-width:768px){
+  .images{
+      height:auto;
+      width:100%;
+  } 
+}
+
+.mar{
+  margin-right:20px;
+}
