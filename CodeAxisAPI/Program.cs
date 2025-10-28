@@ -1,5 +1,6 @@
 using CodeAxisAPI.Entities.Data;
 using Microsoft.EntityFrameworkCore;
+using CodeAxisAPI.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,25 +9,38 @@ builder.Services.AddDbContextPool<CodeAxisContext>((o) =>
     o.UseSqlServer("server=.\\SQLSERVER_2019;database=demo;user id=sa;password=password1.com;TrustServerCertificate=true;");
 });
 
-// GetNetWorth((d) =>
-// {
-//     d += 4566748399477585;
-//     Console.WriteLine($"This is my net worth ${d}");
-// });
-
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/dashboard", () => "Hello my dashboard!");
+using var scoped = app.Services.CreateScope();
+var db = scoped.ServiceProvider.GetRequiredService<CodeAxisContext>();
+// CodeAxisContext db = app.Services.GetRequiredService<CodeAxisContext>();
+
+Console.Write("Enter your lastname : ");
+var n = Console.ReadLine();
+Console.Write("Enter your firstname : ");
+var b = Console.ReadLine();
+Console.Write("Enter your age : ");
+var a = Console.ReadLine();
+var parsed = int.TryParse(a, out int s);
+
+var person = new Person
+{
+    OtherNames = n,
+    LastName = b,
+    Age = s
+};
+
+db.Add(person);
+db.SaveChanges();
+
+
+// var queri = from p in db.Persons
+//             where p.LastName == "Qofi"
+//             select p;  //db.Persons.Where(p => p.LastName == "Qofi");
+
+
+
+// app.MapGet("/", () => "Hello World!");
+// app.MapGet("/dashboard", () => "Hello my dashboard!");
 
 app.Run();
-
-
-
-// string GetNetWorth(Action<decimal> worthAction)
-// {
-
-//     worthAction.Invoke(78);
-
-//     return "";
-// }
