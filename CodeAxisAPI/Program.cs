@@ -15,32 +15,44 @@ using var scoped = app.Services.CreateScope();
 var db = scoped.ServiceProvider.GetRequiredService<CodeAxisContext>();
 // CodeAxisContext db = app.Services.GetRequiredService<CodeAxisContext>();
 
-Console.Write("Enter your lastname : ");
-var n = Console.ReadLine();
-Console.Write("Enter your firstname : ");
-var b = Console.ReadLine();
-Console.Write("Enter your age : ");
-var a = Console.ReadLine();
-var parsed = int.TryParse(a, out int s);
+// Console.Write("Enter your lastname : ");
+// var n = Console.ReadLine();
+// Console.Write("Enter your firstname : ");
+// var b = Console.ReadLine();
+// Console.Write("Enter your age : ");
+// var a = Console.ReadLine();
+// var parsed = int.TryParse(a, out int s);
 
-var person = new Person
+// var person = new Person
+// {
+//     OtherNames = n,
+//     LastName = b,
+//     Age = s
+// };
+
+// db.Add(person);
+// db.SaveChanges();
+
+Console.Write("Enter name of person you are searching : ");
+string? per = Console.ReadLine();
+
+var queri = from p in db.Persons
+            where p.OtherNames == per
+            select new {p.LastName , p.Age, p.OtherNames};  //db.Persons.Where(p => p.LastName == "Qofi");
+
+db.Persons.Where(m => m.OtherNames != per);
+
+foreach (var output in queri)
 {
-    OtherNames = n,
-    LastName = b,
-    Age = s
-};
+    Console.WriteLine();
+    Console.WriteLine("User Details.");
+    Console.WriteLine($"LastName : {output.LastName}");
+    Console.WriteLine($"Age : {output.Age}");
+    Console.WriteLine();
+}
 
-db.Add(person);
-db.SaveChanges();
+    // app.MapGet("/", () => "Hello World!");
+    // app.MapGet("/dashboard", () => "Hello my dashboard!");
 
+    app.Run();
 
-// var queri = from p in db.Persons
-//             where p.LastName == "Qofi"
-//             select p;  //db.Persons.Where(p => p.LastName == "Qofi");
-
-
-
-// app.MapGet("/", () => "Hello World!");
-// app.MapGet("/dashboard", () => "Hello my dashboard!");
-
-app.Run();
