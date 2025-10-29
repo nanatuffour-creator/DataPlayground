@@ -161,7 +161,6 @@ void VerUser()
         }
     }
     
-    
 }
 app.MapGet("/", () => "Hello World!");
 
