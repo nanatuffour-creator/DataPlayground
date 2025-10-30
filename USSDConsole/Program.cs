@@ -10,7 +10,6 @@ builder.Services.AddDbContextPool<UssdContext>((o) =>
     o.UseSqlServer("server=.\\SQLSERVER_2019;database=demo;user id=sa;password=password1.com;TrustServerCertificate=true;");
 });
 
-
 var app = builder.Build();
 
 using var scoped = app.Services.CreateScope();
@@ -45,27 +44,29 @@ void RegAdvan()
     var b = Console.ReadLine();
 
     var random = new Random();
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    var type = "ADVANSIO";
+    var chars = "0123456789!@#";
     var result = new StringBuilder();
 
-    for (int i = 0; i < 15; i++) // Change 10 to your desired length
+    for (int i = 0; i < 5; i++) // Change 10 to your desired length
     {
         result.Append(chars[random.Next(chars.Length)]);
     }
+    var type1 = type + result;
 
     var advan = new AdvansioUser
     {
         FirstName = n,
         LastName = b,
         ProgramName = "Advansio Meeting.",
-        Code = result.ToString()
+        Code = type1.ToString()
     };
-    
+
     db.Add(advan);
     db.SaveChanges();
 
-    var m = result.ToString();
-    Console.WriteLine($"This is your meeting code {m}");
+    var m = type1.ToString();
+    Console.WriteLine($"You have been registered for the meeting and your meeting code is {m}");
 }
 
 void RegAdvis()
@@ -76,33 +77,35 @@ void RegAdvis()
     var b = Console.ReadLine();
 
     var random = new Random();
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    var type = "ADVISORY";
+    var chars = "0123456789!@#";
     var result = new StringBuilder();
 
-    for (int i = 0; i < 15; i++) // Change 10 to your desired length
+    for (int i = 0; i < 5; i++) // Change 10 to your desired length
     {
         result.Append(chars[random.Next(chars.Length)]);
     }
+    var type1 = type + result;
 
     var advis = new AdvisoryUser
     {
         FirstName = n,
         LastName = b,
         ProgramName = " Advisory Meeting.",
-        Code = result.ToString()
+        Code = type1.ToString()
     };
 
     db.Add(advis);
     db.SaveChanges();
 
-    var m = result.ToString();
-    Console.WriteLine($"This is your meeting code {m}");
+    var m = type1.ToString();
+    Console.WriteLine($"You have been registered for the meeting and your meeting code is {m}");
 }
 
 void VerUser()
 {
     Console.WriteLine("Which Meeting are you checking for.");
-    Console.WriteLine("1.Advisory Meeting");    
+    Console.WriteLine("1.Advisory Meeting");
     Console.WriteLine("2.Advansio Meeting");
     Console.Write("Select your option : ");
     var opt = Console.ReadLine();
@@ -115,15 +118,16 @@ void VerUser()
     {
         VerAdvan();
     }
-    
+
     void VerAdvan()
     {
         Console.Write("Enter code of meeting : ");
         string? per = Console.ReadLine();
 
-        var queri = from p in db.AdvansioUser
-                    where p.Code == per
-                    select p;
+
+        var queri = (from p in db.AdvansioUser
+                     where p.Code == per
+                     select p); //.ToList();
 
         foreach (var output in queri)
         {
@@ -137,7 +141,7 @@ void VerUser()
             }
         }
     }
-    
+
     void VerAdvis()
     {
         Console.Write("Enter code of meeting : ");
@@ -160,8 +164,9 @@ void VerUser()
             }
         }
     }
-    
-}
-app.MapGet("/", () => "Hello World!");
 
-app.Run();
+}
+
+// app.MapGet("/", () => "Hello World!");
+
+// app.Run();

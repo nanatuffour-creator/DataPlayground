@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
+using WebApplication1.Data;
 
 namespace WebApplication1.Controllers;
 
@@ -8,10 +9,12 @@ namespace WebApplication1.Controllers;
 public class FormController : Controller
 {
     private readonly ILogger<FormController> _logger;
+    private readonly FormDbContext _context;
 
-    public FormController(ILogger<FormController> logger)
+    public FormController(ILogger<FormController> logger, FormDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Talk()
@@ -28,6 +31,8 @@ public class FormController : Controller
     [HttpPost]
     public IActionResult Posts([Bind] FormModel model)
     {
+
+
         ViewBag.Message = "Message successfully sent.";
         return RedirectToAction("Talk");
     }
