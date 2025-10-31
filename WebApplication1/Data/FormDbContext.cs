@@ -9,7 +9,6 @@ public class FormDbContext : DbContext
     public FormDbContext(DbContextOptions<FormDbContext> options): base(options)
     {
     }
-
     public DbSet<FormModel> FormModels { get; set; }
 }
 

@@ -6,8 +6,6 @@ using WebApplication1.Data;
 
 namespace WebApplication1.Controllers;
 
-
-
 public class FormController : Controller
 {
     private readonly ILogger<FormController> _logger;
@@ -17,18 +15,15 @@ public class FormController : Controller
         _logger = logger;
         _context = context;
     }
-
     public IActionResult Talk()
     {
         return View();
     }
-
     [HttpGet]
     public IActionResult Post()
     {
         return View();
     }
-
     [HttpPost]
     public async Task<IActionResult> Posts(FormModel model)
     {
@@ -36,14 +31,12 @@ public class FormController : Controller
         {
             _context.Add(model);
             _context.SaveChanges();
-
             FormModel output = new FormModel()
             {
                 Name = model.Name,
                 Email = model.Email,
                 Message = model.Message
             };
-
             string emailSubject = "Thank You for contacting CodeAxis";
             string? username = model.Name;
             string emailMessage = "Dear " + username + "\n" +
@@ -51,18 +44,13 @@ public class FormController : Controller
                                 "Our team will contact you very soon.\n" +
                                 "Best Regards\n\n" +
                                 "Your Message:\n" + model.Message;
-
             EmailSender emailSender = new EmailSender();
             await emailSender.SendEmail(model.Email!, username!, emailSubject, emailMessage);
-
             return RedirectToAction("Talk"); 
         }
-
-            
-        // ViewBag.Message = "Message successfully sent.";
+        ViewBag.Message = "Message successfully sent.";
         return RedirectToAction("Talk", model);
     }
-
     // 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
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
