@@ -10,9 +10,6 @@ builder.Services.AddDbContext<FormDbContext>(options =>
 
 var app = builder.Build();
 
-using var scoped = app.Services.CreateScope();
-    var db = scoped.ServiceProvider.GetRequiredService<FormDbContext>();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

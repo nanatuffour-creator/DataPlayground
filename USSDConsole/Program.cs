@@ -20,6 +20,7 @@ Console.WriteLine("1.Register For Oakwood Advisory meeting.");
 Console.WriteLine("2.Register For Oakwood Advansio meeting.");
 Console.WriteLine("3.Verify user's meeting code.");
 Console.Write("Choose the meeting you would like to register for : ");
+
 var select = Console.ReadLine();
 var parsed = int.TryParse(select, out int u);
 
@@ -27,10 +28,12 @@ if (u == 1)
 {
     RegAdvis();
 }
+
 else if (u == 2)
 {
     RegAdvan();
 }
+
 else if (u == 3)
 {
     VerUser();
@@ -44,8 +47,8 @@ void RegAdvan()
     var b = Console.ReadLine();
 
     var random = new Random();
-    var type = "ADVANSIO";
-    var chars = "0123456789!@#";
+    var type = "ADVAN";
+    var chars = "0123456789";
     var result = new StringBuilder();
 
     for (int i = 0; i < 5; i++) // Change 10 to your desired length
@@ -62,7 +65,7 @@ void RegAdvan()
         Code = type1.ToString()
     };
 
-    db.Add(advan);
+    var advisory = db.Set<AdvansioUser>().Add(advan);
     db.SaveChanges();
 
     var m = type1.ToString();
@@ -77,8 +80,8 @@ void RegAdvis()
     var b = Console.ReadLine();
 
     var random = new Random();
-    var type = "ADVISORY";
-    var chars = "0123456789!@#";
+    var type = "ADVIS";
+    var chars = "0123456789";
     var result = new StringBuilder();
 
     for (int i = 0; i < 5; i++) // Change 10 to your desired length
@@ -95,7 +98,7 @@ void RegAdvis()
         Code = type1.ToString()
     };
 
-    db.Add(advis);
+    var advisory = db.Set<AdvisoryUser>().Add(advis);
     db.SaveChanges();
 
     var m = type1.ToString();
@@ -108,12 +111,15 @@ void VerUser()
     Console.WriteLine("1.Advisory Meeting");
     Console.WriteLine("2.Advansio Meeting");
     Console.Write("Select your option : ");
+
     var opt = Console.ReadLine();
     var parsed = int.TryParse(opt, out int j);
+
     if (j == 1)
     {
         VerAdvis();
     }
+
     else if (j == 2)
     {
         VerAdvan();
@@ -124,10 +130,8 @@ void VerUser()
         Console.Write("Enter code of meeting : ");
         string? per = Console.ReadLine();
 
-
-        var queri = (from p in db.AdvansioUser
-                     where p.Code == per
-                     select p); //.ToList();
+        var queri = db.Set<AdvansioUser>()
+        .Where(u => u.Code! == per);
 
         foreach (var output in queri)
         {
@@ -147,10 +151,8 @@ void VerUser()
         Console.Write("Enter code of meeting : ");
         string? per = Console.ReadLine();
 
-        var queri = from p in db.AdvisoryUser
-                    where p.Code == per
-                    select p;
-
+        var queri = db.Set<AdvisoryUser>()
+        .Where(u => u.Code == per);
 
         foreach (var output in queri)
         {
@@ -166,7 +168,5 @@ void VerUser()
     }
 
 }
-
 // app.MapGet("/", () => "Hello World!");
-
 // app.Run();
