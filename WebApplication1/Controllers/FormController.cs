@@ -31,12 +31,6 @@ public class FormController : Controller
         {
             _context.Add(model);
             _context.SaveChanges();
-            FormModel output = new FormModel()
-            {
-                Name = model.Name,
-                Email = model.Email,
-                Message = model.Message
-            };
             string emailSubject = "Thank You for contacting CodeAxis";
             string? username = model.Name;
             string emailMessage = "Dear " + username + "\n" +
